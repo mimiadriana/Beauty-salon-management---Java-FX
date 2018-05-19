@@ -10,7 +10,3 @@ To run it you need to have
 Code for login: 0000
 Screenshots
  
- 
- 
-
-
