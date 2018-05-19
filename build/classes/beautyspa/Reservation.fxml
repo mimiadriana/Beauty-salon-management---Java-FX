@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="650.0" style="-fx-background-color: aquamarine;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beautyspa.ReservationController">
+   <children>
+      <TableView fx:id="reservation" layoutX="25.0" layoutY="45.0" prefHeight="279.0" prefWidth="332.0">
+        <columns>
+          <TableColumn fx:id="Id" maxWidth="100.0" prefWidth="48.0" text="No." />
+          <TableColumn fx:id="cust" prefWidth="66.0" text="Customer" />
+            <TableColumn fx:id="date" prefWidth="51.0" text="Date" />
+            <TableColumn fx:id="time" prefWidth="62.0" text="Time" />
+            <TableColumn fx:id="serv" prefWidth="104.0" text="Service" />
+        </columns>
+      </TableView>
+      <TableView fx:id="customers" layoutX="25.0" layoutY="364.0" prefHeight="200.0" prefWidth="316.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="45.0" text="No." />
+          <TableColumn fx:id="name" prefWidth="85.0" text="Name" />
+            <TableColumn fx:id="phone" prefWidth="92.0" text="Phone" />
+            <TableColumn fx:id="comment" prefWidth="93.0" text="Comment" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="servicecombo" layoutX="432.0" layoutY="101.0" prefWidth="150.0" />
+      <ComboBox fx:id="customercombo" layoutX="433.0" layoutY="147.0" prefWidth="150.0" />
+      <Label layoutX="378.0" layoutY="104.0" text="Service" textFill="#4105e5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <DatePicker fx:id="datetxt" layoutX="432.0" layoutY="192.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="366.0" layoutY="150.0" text="Customer" textFill="#4105e5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="33.0" layoutY="14.0" text="Reservations" textFill="#4007dd">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font></Label>
+      <Label layoutX="386.0" layoutY="195.0" text="Date" textFill="#4105e5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="385.0" layoutY="240.0" text="Time" textFill="#4105e5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="nametxt" layoutX="428.0" layoutY="417.0" />
+      <TextField fx:id="phonetxt" layoutX="428.0" layoutY="452.0" />
+      <Button layoutX="375.0" layoutY="282.0" mnemonicParsing="false" onAction="#insert" text="Insert" textAlignment="CENTER" textFill="#3211ee" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button layoutX="459.0" layoutY="282.0" mnemonicParsing="false" onAction="#modify" text="Modify" textAlignment="CENTER" textFill="#3211ee" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button layoutX="549.0" layoutY="282.0" mnemonicParsing="false" onAction="#delete" text="Delete" textAlignment="CENTER" textFill="#3211ee" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button layoutX="410.0" layoutY="15.0" mnemonicParsing="false" onAction="#services" prefHeight="58.0" prefWidth="98.0" style="-fx-background-color: green;" text="Services" textFill="#180ba8">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Button layoutX="541.0" layoutY="15.0" mnemonicParsing="false" onAction="#close" prefHeight="58.0" prefWidth="98.0" style="-fx-background-color: green;" text="Close" textFill="#180ba8">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <TextField fx:id="timetxt" layoutX="433.0" layoutY="237.0" />
+      <Button layoutX="390.0" layoutY="536.0" mnemonicParsing="false" onAction="#insert1" text="Insert" textFill="#220bd6">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="473.0" layoutY="536.0" mnemonicParsing="false" onAction="#modify1" text="Modify" textFill="#220bd6">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="Delete1" layoutX="562.0" layoutY="536.0" mnemonicParsing="false" onAction="#delete1" text="Delete" textFill="#220bd6">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="25.0" layoutY="332.0" text="Customers" textFill="#4007dd">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="380.0" layoutY="420.0" text="Name" textFill="#4105e5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="commtxt" layoutX="428.0" layoutY="500.0" />
+      <Label layoutX="356.0" layoutY="503.0" text="Comment" textFill="#4105e5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="377.0" layoutY="464.0" text="Phone" textFill="#4105e5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="396.0" layoutY="332.0" mnemonicParsing="false" onAction="#today" prefHeight="58.0" prefWidth="108.0" style="-fx-background-color: green;" text="Today's reservations" textAlignment="CENTER" textFill="#180ba8" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="523.0" layoutY="332.0" mnemonicParsing="false" onAction="#all" prefHeight="58.0" prefWidth="108.0" style="-fx-background-color: green;" text="All reservations" textAlignment="CENTER" textFill="#180ba8" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
